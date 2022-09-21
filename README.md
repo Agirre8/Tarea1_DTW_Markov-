@@ -1,3 +1,6 @@
 # Tarea1_DTW_Markov-
 
-Link al repositorio:
+Repositorio
+
+Kaggle
+https://www.kaggle.com/datasets/aymanlafaz/moroccan-stock-prices
