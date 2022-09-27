@@ -8,9 +8,6 @@
 \begin{document}
 
 
-
-
-
 \centering
 {\LARGE \textbf{ Algoritmo de dos fases para reconocer actividades humanas 
 en el contexto de la Industria 4.0 y procesos impulsados por humanos}\vspace{5mm}}
@@ -102,7 +99,7 @@ Y=\{Y_{t},t=1,...,T_{m}\}=\{Y^{i},i=1,...,N_{m}\}
 \begin{equation}
 R=\{R_{i},i=1,...,K\}
 \end{equation}
-En general, la gente lleva a cabo los movimientos de forma diferente pero similar. Por esto, las transiciones pueden ser más cortas o más largas, algunas acciones elementales pueden ser añadidas o eliminadas, etc. Por lo tanto, dada una secuencia X con  $N_x$ muestras, para que un movimiento sea reconocido, tiene que pertenecer a un patrón $R_i\in R$ cercano a X; asi pues, $R_{i}$ es reconocido como la acción llevada a cabo. Para hacer esto, se define una función distancia(5). Esta función, podría ser aplicada para calcular la matriz de costes, necesaria ya que normalmente no tienen la misma longitud ni están alineadas(6).
+En general, la gente lleva a cabo los movimientos de forma diferente pero similar. Por esto, las transiciones pueden ser más cortas o más largas, algunas acciones elementales pueden ser añadidas o eliminadas, etc. Por lo tanto, dada una secuencia X con  $N_x$ muestras, para que un movimiento sea reconocido, tiene que pertenecer a un patrón $R_i\in R$ cercano a X; así pues, $R_{i}$ es reconocido como la acción llevada a cabo. Para hacer esto, se define una función distancia(5). Esta función, podría ser aplicada para calcular la matriz de costes, necesaria ya que normalmente no tienen la misma longitud ni están alineadas(6).
 \begin{equation}
 d:F\times F \rightarrow \mathbb{R}^{+}, \:\:\:\:\:\:\:\:\: X^{i},r_{j}^{i}\in F
 \end{equation}
@@ -205,7 +202,38 @@ La Figura 4 representa la tasa media de éxito para tres casos: la solución glo
 \vspace{5mm}
 
 \section{Conclusiones y trabajos futuros}
+En este paper se presenta un nuevo algoritmo de reconocimiento de patrones para integrar personas en sistemas de industria 4.0 y procesos impulsados por humanos. El algoritmo define actividades complejas como composiciones de movimientos simples. Las actividades complejas son reconocidas usando modelos ocultos de Markov, y los movimientos simples se reconocen usando deformación dinámica del tiempo. Para permitir la implementación de este algoritmo en pequeños dispositivos integrados, se seleccionan configuraciones optimizadas. Una validación experimental se lleva también a cabo, y los resultados muestran una mejora global en la tasa de éxito en un 9\%.\\
+Trabajos futuros considerarán metodologías más complejas para el procesamiento de datos, y se evaluará la comparación de diferentes configuraciones del algoritmo propuesto. Además, la propuesta será analizada en escenarios diferentes.\\
 
+\vspace{5mm}
 
+\textbf{Expresiones de gratitud.} La investigación conllevó a estos resultados, fue financiada por el Ministerio de economía y Competitividad a través del proyecto SEMOLA (TEC2015-68284-R) y el Ministerio de Ciencia, Innovación y Universidades a través del proyecto VACADENA (RTC-2017-6031-2).
+
+\newpage
+
+{\LARGE{\textbf{Referencias}}}\\
+\vspace{5mm}
+\begin{enumerate}
+\item Bordel, B., Alcarria, R., Sánchez-de-Rivera, D., & Robles, T. (2017, noviembre). Protegiendo los sistemas de la industria 4.0 contra los efectos maliciosos de los ataques ciberfísicos. Conferencia Internacional sobre Computación Ubicua e Inteligencia Ambiental (pp. 161- 171). Springer, Cham.
+\item Bordel, B., Alcarria, R., Robles, T., & Martín, D. (2017). Sistemas ciberfísicos: Ampliación de la detección generalizada de la teoría del control al Internet de las cosas. informática omnipresente y móvil, 40, 156-184.
+\item Neff, W. (2017). Trabajo y comportamiento humano. Routledge.
+\item Bordel, B., Alcarria, R., Martín, D., Robles, T., & de Rivera, D. S. (2017). Autoconfiguración en sistemas ciberfísicos humanizados. Revista de inteligencia ambiental y computación humanizada, 8(4), 485-496.
+\item Bordel, B., de Rivera, D. S., Sánchez-Picot, Á., & Robles, T. (2016). Control de procesos físicos basados en los sistemas de industria 4.0:Enfoque en procesos ciberfísicos, en Computación Ubicua e Inteligencia Ambiental(pp. 257-262). Springer, Cham.
+\item Pal, S. K., & Wang, P. P. (2017). Algoritmos genéticos para reconocimiento de patrones. Prensa CRC.
+\item Müller, M. (2007). Deformación dinámica del tiempo. Recuperación de información para movimiento y música. 69-84.
+\item Eddy, S. R. (1996). Modelos ocultos de Markov. Opinión actual en la biología estructural. 6(3), 361-365.
+\item Kim, E., Helal, S., & Cook, D. (2010). Reconocimiento de la actividad humana y descubrimiento de patrones. IEEE Computación penetrante/IEEE Sociedad computacional [y] IEEE Comunicados de la sociedad, 9(1), 48.
+\item Li, Z., Wei, Z., Yue, Y., Wang, H., Jia, W., Burke, L. E., ... & Sun, M. (2015). Un modelo de Markov oculto adaptativo para el reconocimiento de actividad basado en un dispositivo multisensor portátil. Revista de sistemas médicos, 39(5), 57.
+\item Ordonez, F. J., Englebienne, G., De Toledo, P., Van Kasteren, T., Sanchis, A., & Krose, B. (2014). Reconocimiento de actividad en el hogar: Inferencia bayesiana para modelos ocultos de Markov. IEEE Computación penetrante, 13(3), 67-75
+\item Zhan, K., Faux, S., & Ramos, F. (2015). Campos aleatorios condicionales multiescala para el reconocimiento de actividad en primera persona en ancianos y pacientes discapacitados. Computación penetrante y móvil, 16, 251-267
+\item Liu, A. A., Nie, W. Z., Su, Y. T., Ma, L., Hao, T., & Yang, Z. X. (2015). Acoplado oculto campos aleatorios condicionales para el reconocimiento de acciones humanas RGB-D, oculto acoplados. Procesamiento de la señal, 112,
+74-82.
+\item Liu, J., Huang, M., & Zhu, X. (2010, julio). Reconocimiento de entidades biomédicas nombradas mediante campos aleatorios condicionales de salto de cadena. En actas del taller de 2010 sobre procesamiento biomédico del lenguaje natural (pp. 10-18). Asociación de Lingüística Computacional.
+\item Gu, T., Wu, Z., Tao, X., Pung, H. K., & Lu, J. (2009, marzo). Épsicar: Un enfoque basado en patrones emergentes para el reconocimiento de actividades secuenciales, intercaladas y concurrentes. En Computación y comunicaciones generalizadas, 2009. PerCom 2009. Conferencia internacional IEEE en (pp. 1-9). IEEE.
+\item Hu, B. G. (2014). ¿Cuáles son las diferencias entre los clasificadores bayesianos y los clasificadores de información mutua? IEEE Trans. Neural Netw. Sistema de aprendizaje., 25(2), 249-264
+\item Wang, X., Liu, X., Pedrycz, W., & Zhang, L. (2015).  Árboles de decisión basados en reglas difusas. Reconocimiento de patrones, 48(1), 50-59.
+\item Davis, M. H. (2018). Modelos y optimización de Markov. Routledge
+\item Bordel Sánchez, B., Alcarria, R., Martín, D., & Robles, T. (2015). TF4SM: Un marco para el desarrollo de soluciones de trazabilidad en pequeñas empresas manufactureras. Sensores, 15(11), 29478-29510.
+\end{enumerate}
 
 \end{document}
