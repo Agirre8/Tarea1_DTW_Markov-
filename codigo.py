@@ -41,3 +41,6 @@ for i in range(10):
         axs[i, j].plot(stocks_df[cols[i*7+j]].values)
         axs[i, j].set_title(cols[i*7+j])
 plt.show()
+
+ts = np.array(stocks.T).reshape(stocks.T.shape[0], stocks.T.shape[1], 1)
+ts = TimeSeriesScalerMinMax().fit_transform(ts)
