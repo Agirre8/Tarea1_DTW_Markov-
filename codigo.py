@@ -32,3 +32,12 @@ ax.set_title('MASI Index Movements')
 ax.set_ylabel('MASI')
 ax.set_xlabel('date')
 fig.tight_layout();
+
+cols = stocks_df.columns
+
+fig, axs = plt.subplots(10,7,figsize=(35,35))
+for i in range(10):
+    for j in range(7):
+        axs[i, j].plot(stocks_df[cols[i*7+j]].values)
+        axs[i, j].set_title(cols[i*7+j])
+plt.show()
