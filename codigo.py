@@ -1,1 +1,12 @@
 !pip install tslearn
+
+import tslearn
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from tslearn.clustering import TimeSeriesKMeans, silhouette_score
+from tslearn import metrics
+from tslearn.preprocessing import TimeSeriesScalerMinMax
+from tslearn.piecewise import PiecewiseAggregateApproximation
+import warnings
+warnings.filterwarnings('ignore')
