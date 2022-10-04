@@ -18,3 +18,4 @@ stocks_df.date = pd.to_datetime(stocks_df.date, format='%d/%m/%Y')
 (stocks_df.isnull().sum()*100 / stocks_df.shape[0]).sort_values(ascending = False).head(15)
 
 stocks_df.drop(columns = ["SAMIR", "Diac Salaf", "Aradei Capital", "Mutandis", "Immr Invest"], inplace = True)
+(stocks_df.isnull().sum()*100 / stocks_df.shape[0]).sort_values(ascending = False).head(15)
