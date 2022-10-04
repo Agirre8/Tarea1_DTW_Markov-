@@ -76,3 +76,17 @@ fig, ax = plt.subplots(1, 1,figsize=(15,5))
 ax.set_title("Cluster Distribution for KMeans")
 ax.bar(cluster_n, cluster_c)
 plt.show()
+
+colors = ['blue', 'green','red', 'black', 'orange', 'brown', 'y']
+
+fig, ax = plt.subplots(10, 7,figsize=(35,35))
+for i in range(10):
+    for j in range(7):
+        try:
+            ax[i, j].plot(stocks[cols[i*7+j]].values, color = colors[y_pred[i*7+j]])
+            ax[i, j].set_title(f"{cols[i*7+j]}, Cluster {y_pred[i*7+j]}")
+        except:
+            fig.delaxes(ax[i, j])
+            continue
+
+plt.show()
