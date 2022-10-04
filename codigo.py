@@ -24,3 +24,11 @@ stocks_df = stocks_df.resample('7D', on = 'date').first().reset_index(drop = Tru
 stocks_df.index = stocks_df.date
 stocks_df.drop("date", axis = 1, inplace = True)
 stocks = stocks_df
+
+fig, ax = plt.subplots(figsize=(8, 5))
+ax.plot(stocks_df.index, stocks_df["MASI"])
+ax.grid()
+ax.set_title('MASI Index Movements')
+ax.set_ylabel('MASI')
+ax.set_xlabel('date')
+fig.tight_layout();
