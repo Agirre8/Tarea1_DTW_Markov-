@@ -44,3 +44,12 @@ plt.show()
 
 ts = np.array(stocks.T).reshape(stocks.T.shape[0], stocks.T.shape[1], 1)
 ts = TimeSeriesScalerMinMax().fit_transform(ts)
+
+n_segments = 10
+paa = PiecewiseAggregateApproximation(n_segments = n_segments)
+ts = paa.fit_transform(ts)
+km = TimeSeriesKMeans(n_clusters = 4, random_state = 42, metric = 'dtw')
+y_pred = km.fit_predict(ts)
+s = silhouette_score(ts, y_pred, metric='dtw')
+print("K-means metrics : ")
+print(f"Silhouette score = {s}, \nInertia = {km.inertia_}")
