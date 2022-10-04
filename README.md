@@ -7,3 +7,4 @@ Kaggle:
 https://www.kaggle.com/datasets/aymanlafaz/moroccan-stock-prices
 
 suspensos
+recuperacion
