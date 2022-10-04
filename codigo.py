@@ -56,3 +56,16 @@ print(f"Silhouette score = {s}, \nInertia = {km.inertia_}")
 
 clusters_df = pd.DataFrame({'Company':stocks.columns, 'Cluster': y_pred}).sort_values(by = 'Cluster')
 clusters_df.reset_index(drop = True)
+
+for yi in range(4):
+    plt.subplot(3, 3, 4 + yi)
+    for xx in ts[y_pred == yi]:
+        plt.plot(xx.ravel(), "k-", alpha=.2)
+    plt.plot(km.cluster_centers_[yi].ravel(), "r-")
+    plt.xlim(0, ts.shape[1])
+    plt.ylim(-.5, 1.5)
+    plt.text(0.55, 0.85,'Cluster %d' % (yi),
+             transform=plt.gca().transAxes)
+    plt.gcf().set_size_inches(15, 15)
+    if yi == 1:
+        plt.title("DBA $k$-means")
