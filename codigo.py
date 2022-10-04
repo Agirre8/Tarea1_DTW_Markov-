@@ -23,3 +23,4 @@ stocks_df = stocks_df.resample('7D', on = 'date').first().reset_index(drop = Tru
 
 stocks_df.index = stocks_df.date
 stocks_df.drop("date", axis = 1, inplace = True)
+stocks = stocks_df
