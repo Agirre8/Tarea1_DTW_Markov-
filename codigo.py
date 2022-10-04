@@ -53,3 +53,6 @@ y_pred = km.fit_predict(ts)
 s = silhouette_score(ts, y_pred, metric='dtw')
 print("K-means metrics : ")
 print(f"Silhouette score = {s}, \nInertia = {km.inertia_}")
+
+clusters_df = pd.DataFrame({'Company':stocks.columns, 'Cluster': y_pred}).sort_values(by = 'Cluster')
+clusters_df.reset_index(drop = True)
