@@ -69,3 +69,10 @@ for yi in range(4):
     plt.gcf().set_size_inches(15, 15)
     if yi == 1:
         plt.title("DBA $k$-means")
+
+cluster_c = clusters_df["Cluster"].value_counts().sort_index()
+cluster_n = [f"Cluster{str(i)}" for i in range(km.n_clusters)]
+fig, ax = plt.subplots(1, 1,figsize=(15,5))
+ax.set_title("Cluster Distribution for KMeans")
+ax.bar(cluster_n, cluster_c)
+plt.show()
