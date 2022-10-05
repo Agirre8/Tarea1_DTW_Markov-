@@ -1,4 +1,5 @@
-!pip install tslearn
+
+
 
 import tslearn
 import numpy as np
@@ -9,6 +10,7 @@ from tslearn import metrics
 from tslearn.preprocessing import TimeSeriesScalerMinMax
 from tslearn.piecewise import PiecewiseAggregateApproximation
 import warnings
+
 warnings.filterwarnings('ignore')
 
 stocks_df = pd.read_csv("../input/moroccan-stock-prices/stocks.csv")
