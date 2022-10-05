@@ -202,8 +202,23 @@ La Figura 4 representa la tasa media de éxito para tres casos: la solución glo
 \vspace{5mm}
 
 \section{Conclusiones y trabajos futuros}
+
 En este paper se presenta un nuevo algoritmo de reconocimiento de patrones para integrar personas en sistemas de industria 4.0 y procesos impulsados por humanos. El algoritmo define actividades complejas como composiciones de movimientos simples. Las actividades complejas son reconocidas usando modelos ocultos de Markov, y los movimientos simples se reconocen usando deformación dinámica del tiempo. Para permitir la implementación de este algoritmo en pequeños dispositivos integrados, se seleccionan configuraciones optimizadas. Una validación experimental se lleva también a cabo, y los resultados muestran una mejora global en la tasa de éxito en un 9\%.\\
 Trabajos futuros considerarán metodologías más complejas para el procesamiento de datos, y se evaluará la comparación de diferentes configuraciones del algoritmo propuesto. Además, la propuesta será analizada en escenarios diferentes.\\
+\subsection{Conclusiones adicionales}
+
+\includegraphics[scale=0.6]{4}
+
+\raggedright
+Como podemos ver en el gráfico, nuestro algoritmo separó bastante bien las acciones de acuerdo con estos patrones:
+
+Tendencia a la bajada Tendencia a la subida Recuperación de la pandemia Alcanzó su punto máximo durante la pandemia
+
+Luego visualizamos acciones individuales, vemos que no todas las acciones se vieron afectadas por la pandemia de la misma manera, algunas se vieron afectadas y se recuperaron, otras no y algunas incluso alcanzaron su punto máximo durante este período.
+
+\includegraphics[scale=0.5]{5}
+
+\raggedright
 
 \vspace{5mm}
 
